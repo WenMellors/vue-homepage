@@ -1,13 +1,8 @@
 <template>
   <div class="home">
-    <Layerout>
-      <Header style="height: 100vh">
-        <Banner/>
-      </Header>
-      <Content>
-        施工中~
-      </Content>
-    </Layerout>
+    <div class="banner">
+      <Banner/>
+    </div>
   </div>
 </template>
 
@@ -20,3 +15,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.banner {
+  height: 100vh;
+}
+</style>

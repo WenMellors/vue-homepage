@@ -1,20 +1,28 @@
 <template>
     <div class="banner">
+        <!-- 顶部导航栏 -->
         <!-- 背景层 -->
         <div class="bg"></div>
         <!-- 个人区 -->
         <div class="presentation">
-            <img class="avatar" src="../assets/avatar.jpeg"/>
-            <p class="title">梅勒斯的主页</p>
+            <img class="avatar" src="../assets/avatar.jpeg"/> <br>
+            <vue-typer :text="title" class="title" eraseStyle="backspace"></vue-typer>
         </div>
     </div>
 </template>
 
 <script>
+import {VueTyper} from 'vue-typer'
+
 export default {
     name: "Banner",
+    components: {
+        VueTyper
+    },
+
     data () {
         return {
+            title: '梅勒斯的个人主页'
         }
     }
 }
@@ -39,7 +47,7 @@ export default {
     left: 0;
     z-index: -1;
     background-size: cover;
-    filter: blur(2px);
+    filter: blur(3px);
 }
 .presentation {
     margin: 20vh auto;
